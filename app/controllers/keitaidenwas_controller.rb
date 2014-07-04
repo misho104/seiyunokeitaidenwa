@@ -3,7 +3,7 @@ class KeitaidenwasController < ApplicationController
     login
     ActiveRecord::Base.transaction do
       p = params.dup.symbolize_keys
-      s = Seiyu.find_or_create_by_name!(p[:keitaidenwa][:seiyu][:name])
+      s = Seiyu.find_or_create_by!(name: p[:keitaidenwa][:seiyu][:name])
       p[:keitaidenwa].delete :seiyu
       k = Keitaidenwa.create p[:keitaidenwa].merge(seiyu_id: s.id)
       redirect_to keitaidenwa_path(k.id)
