@@ -1,8 +1,14 @@
 {
   "default": {
-    "name": "声優"
+    "name": "声優",
+    "mono": "携帯電話"
   },
   "other": {
-    "name": "声優以外"
+    "name": "声優以外",
+    "mono": "携帯電話"
+  },
+  "seiyu-other": {
+    "name": "声優",
+    "mono": "携帯電話以外"
   }
 }

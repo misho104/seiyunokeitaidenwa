@@ -1,7 +1,7 @@
 %p
   %form#seiyu_jump
     %input#seiyu_name
-    %button が使っていた携帯電話を見る
+    %button が使っていた#{Message['mono']}を見る
   %form#keitaidenwa_jump
     %input#keitaidenwa_name
     %button を使っていた#{Message['name']}を見る
@@ -12,7 +12,7 @@
     %tr
       %th #{Message['name']}
       %th 機種
-      %th その携帯電話だった日
+      %th その#{Message['mono']}だった日
     -@list.includes(:seiyu).page(page).each do |k|
       %tr.autopagerize_page_element
         %td=link_to k.seiyu.name, seiyu_path(k.seiyu)

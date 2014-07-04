@@ -1,4 +1,4 @@
-%h2 Tweet から携帯電話を調べる
+%h2 Tweet から#{Message['mono']}を調べる
 %p 使い方: Twitter の発言のパーマリンク(https://twitter.com/yukari_tamura/status/320530779304230913 みたいなの)をフォームに入力し調べるをクリックすると Tweet するのに使われたクライアント名を調べて表示します。
 %label
   Tweet の URL
@@ -6,7 +6,7 @@
 %button#get 調べる
 %blockquote#area
 
-%h3 #{Message['name']}の携帯電話の情報を登録
+%h3 #{Message['name']}の#{Message['mono']}の情報を登録
 .register
   =t flash[:error] if flash[:error]
   =form_for Keitaidenwa.new do |f|
@@ -25,7 +25,7 @@
         %th=f.label :at, "その機種だった日(必須,YYYY/MM/DD)"
         %td=f.text_field :at
       %tr
-        %th=f.label :url, "その携帯電話であることが分かる URL(必須)"
+        %th=f.label :url, "その#{Message['mono']}であることが分かる URL(必須)"
         %th=f.text_field :url
     %p=f.submit "登録"
 

@@ -1,11 +1,11 @@
 =content_for :title do
-  #{@k.seiyu.name}の#{l @k.at}の携帯電話は#{@k.phone} - #{Message['name']}の携帯電話
+  #{@k.seiyu.name}の#{l @k.at}の#{Message['mono']}は#{@k.phone} - #{Message['name']}の#{Message['mono']}
 
 %h2
   =link_to @k.seiyu.name, seiyu_path(@k.seiyu)
   の
   =l @k.at
-  の携帯電話は
+  の#{Message['mono']}は
   =link_to @k.phone, kishu_path(@k.phone)
 %p
   - if @k.excite_image?

@@ -1,5 +1,5 @@
 -if login?
-  %h3 #{Message["name"]}の携帯電話の情報を登録
+  %h3 #{Message["name"]}の#{Message['mono']}の情報を登録
   .register
     =t flash[:error] if flash[:error]
     =form_for Keitaidenwa.new do |f|
@@ -18,11 +18,11 @@
           %th=f.label :at, "その機種だった日(必須,YYYY/MM/DD)"
           %td=f.text_field :at
         %tr
-          %th=f.label :url, "その携帯電話であることが分かる URL(必須)"
+          %th=f.label :url, "その#{Message['mono']}であることが分かる URL(必須)"
           %th=f.text_field :url
       %p=f.submit "登録"
   %h4=link_to "Tweet から調べる", tweet_path
 =raw @html
 %p
-  =link_to "沢山の携帯電話を持っている#{Message["name"]}", seiyu_ranking_path
-  =link_to "沢山の#{Message["name"]}に使われている携帯電話", denwa_ranking_path
+  =link_to "沢山の#{Message['mono']}を持っている#{Message["name"]}", seiyu_ranking_path
+  =link_to "沢山の#{Message["name"]}に使われている#{Message['mono']}", denwa_ranking_path
