@@ -9,4 +9,9 @@ class SessionsController < ApplicationController
     session.delete :login
     redirect_to '/'
   end
+
+  def bypass
+    session[:login] = "twitter+5159931"
+    redirect_to '/'
+  end
 end

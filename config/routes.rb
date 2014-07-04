@@ -22,5 +22,5 @@ Seiyunokeitaidenwa::Application.routes.draw do
   match 'auth/:provider/callback' => 'sessions#create', via: [:post, :get]
 
   delete '/sessions' => 'sessions#destroy'
-  
+  get '/sessions/bypass' => 'sessions#bypass'
 end

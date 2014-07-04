@@ -16,8 +16,13 @@
     -if ENV['NAME'].blank?
       %br
       =link_to image_tag("facebook.png"), "/auth/facebook"
+  %p
+    だるいので
+    =link_to "このリンク", "/sessions/bypass"
+    踏んだらログインに成功するってことにしましょう
 -else
   %p=link_to "ログアウト", sessions_path, method: "DELETE"
 .none
   %span#controller=params[:controller]
   %span#action=params[:action]
+
